@@ -62,23 +62,42 @@
                 <div> 
                     <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> 
                 <span class="nav_logo-name">Radenta 18351</span> </a>
-                    <div class="nav_list"> <a href="#" class="nav_link active"> 
-                        <i class='bx bxs-home' ></i>
+                    <div class="nav_list"> 
+                        <a href="index.php?a=beranda" class="nav_link active"> 
+                        <i class='bx bxs-home nav_icon' ></i>
                             <span class="nav_name">Dashboard</span> </a> 
-                            <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> 
-                            <a href="#" class="nav_link"> <i class='bx bx-list-ul' ></i> 
-                            <span class="nav_name">Messages</span> </a> 
+                            <a href="index.php?a=profil" class="nav_link"> <i class='bx bx-user nav_icon'></i> 
+                            <span class="nav_name">Profil</span> </a> 
+                            <a href="index.php?a=databarang" class="nav_link"> <i class='bx bx-list-ul nav_icon' ></i> 
+                            <span class="nav_name">Data Barang</span> </a> 
                     </div>
                 </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
                         class="nav_name">SignOut</span> </a>
             </nav>
         </div>
 
-        <div class="height-100 bg-light">
+        <!-- <div class="bg-light content"> -->
             <!-- conten -->
+        <!-- <h3>Beranda</h3>
+        <div class=""></div> -->
 
 
 
         </div>
+
+        <?php
+                        switch (@$_GET['a']) {
+                            case 'beranda':
+                                require "beranda.php";
+                                break;
+
+                            case 'profil':
+                                require "profil.php";
+                                break;
+                            case 'databarang':
+                                require "databarang.php";
+                                break;
+                        }
+                        ?>
 </body>
     </html>

@@ -126,7 +126,7 @@ a {
 }
 
 .nav_link:hover {
-  color: #fff;
+  color: green;
 }
 
 .nav_list {
@@ -156,7 +156,7 @@ a {
 }
 
 .active {
-  color: var(--white-color);
+  color: green;
 }
 
 .active::before {
